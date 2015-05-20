@@ -1,0 +1,18 @@
+@-moz-document url("chrome://browser/content/browser.xul") {
+	#cui_verycui {
+		list-style-image: url('chrome://verycui/content/resources/images/icon16.png');
+		-moz-binding: url('chrome://verycui/content/resources/toolbarbutton.xml#toolbarbutton-stacked');
+	}
+	#cui_verycui .toolbarbutton-icon-1 {
+		filter: sepia(100%) hue-rotate(90deg);
+		position: absolute;
+		clip: rect(8px, 100px, 100px, 0px);
+	}
+	#cui_verycui:hover {
+		filter: grayscale(0);
+	}
+	#cui_verycui[cui-areatype="menu-panel"],
+	toolbarpaletteitem[place="palette"] > #cui_verycui {
+		list-style-image: url('chrome://verycui/content/resources/images/icon32.png');
+	}
+}
